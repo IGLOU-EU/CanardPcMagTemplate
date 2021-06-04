@@ -1,0 +1,385 @@
+/* ==UserStyle==
+@name         CanardPcMagTemplate
+@version      1.0.0
+@description  Un template pour une union avec le magazine papier
+@author       Iglou.eu
+@license      MIT
+==/UserStyle== */
+
+@-moz-document domain("canardpc.com"), domain("www.canardpc.com") {
+  @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+
+  /* Couleurs */
+  :root {
+      --c-dark: #231f20;
+      --c-grey: #4e4c4d;
+      --c-blue: #242855;
+      --c-red:  #9d271e;
+      --c-lblue: #4d77ac;
+      --c-beige: #eeedd2;
+      --c-lgrey: #f2f2f2;
+      --c-light: #fff;
+  }
+
+  /* Animations */
+
+  /* Remover */
+  a:focus:focus, 
+  a:hover:focus, 
+  a:not([href]):not([tabindex]):focus:focus, 
+  a:not([href]):not([tabindex]):hover:focus,
+  #Header nav.navbar ul:not(.categories-nav),
+  #Header nav.navbar .categories-nav a,
+  #Header nav.navbar .categories-nav a:last-child,
+  #Header nav.navbar .categories-nav a:hover,
+  #Header.of-main .categories-nav > a:not(.active), 
+  #Header.of-main .categories-nav > a:not(.active):hover,
+  #Footer {
+      border: none;
+  }
+  #Header {
+      background-image: none;
+      box-shadow: none;
+  }
+  #Header::after,
+  #Header nav.navbar .categories-nav a::after,
+  #Header nav.navbar .categories-nav a::before, 
+  #Header nav.navbar .categories-nav a:not(:first-child)::before,
+  #Header nav.navbar .categories-nav a:not(:last-child)::after {
+      content: none;
+  }
+  #Header .first-part .site-branding .site-logo img,
+  #Header nav.navbar::after, #Header nav.navbar::before,
+  #Header nav.navbar .categories-nav::after {
+      display: none;
+  }
+  #Header nav.navbar {
+      overflow: initial;
+  }
+  #Header nav.navbar .container-wtt-p .grid.grid-24 > * {
+      grid-column: unset;
+  }
+  #Header nav.navbar .categories-nav a:not(.active) {
+      background: var(--secondary-color) !important;
+  }
+  #Header > nav.navbar .categories-nav a:not(:first-child)::before,
+  #Header > nav.navbar .categories-nav a:not(:last-child)::after {
+      transform: none;
+  }
+
+  /* Global */
+  body {
+      --primary-color: var(--c-dark);
+      --secondary-color: var(--c-light);
+
+      --navbar-height: 27.5rem;
+  }
+  body:not(.calendar, .debug-master, .maintenance-page, .maquettistes-posts, .maquettistes-news) {
+      padding-top: calc(var(--navbar-height) - 15.5rem);
+  }
+
+  .site-tools.grid.grid-2 a {
+      text-decoration: underline;
+  }
+  .svg-icon svg {
+      fill: var(--primary-color);
+  }
+
+  .boxed {
+      box-shadow: 0 0 3px rgba(0,0,0,.2);
+  }
+
+  .btn, .btn--danger, 
+  .btn--ghost, 
+  .btn--info, 
+  .btn--inverse, 
+  .btn--primary, 
+  .btn--success, 
+  .btn--warning, 
+  .button, 
+  .button--danger, 
+  .button--ghost, 
+  .button--info, 
+  .button--inverse, 
+  .button--primary, 
+  .button--success, 
+  .button--warning, [type="button"], button {
+      color: var(--c-light) !important;
+      background-color: var(--c-blue);
+  }
+  .btn--danger:hover, 
+  .btn--ghost:hover, 
+  .btn--info:hover, 
+  .btn--inverse:hover, 
+  .btn--primary:hover, 
+  .btn--success:hover, 
+  .btn--warning:hover, 
+  .btn:hover, 
+  .button--danger:hover, 
+  .button--ghost:hover, 
+  .button--info:hover, 
+  .button--inverse:hover, 
+  .button--primary:hover, 
+  .button--success:hover, 
+  .button--warning:hover, 
+  .button:hover, 
+  [type="button"]:hover, 
+  button:hover {
+      color: var(--c-light) !important;
+      background-color: var(--c-lblue);
+  }
+
+  /* Header */
+  #Header {
+      --primary-color: var(--c-dark);
+      --secondary-color: var(--c-light);
+
+      background-color: var(--secondary-color);
+  }
+
+  #Header.minimized {
+      /* box-shadow: 0 1px 0 0 var(--c-blue); */
+  }
+
+  #Header .first-part {
+      padding: 2.5rem;
+  }
+
+  #Header .first-part .site-tools .search-part input {
+      --primary-color: var(--c-dark);
+      --secondary-color: var(--c-grey);
+
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+
+      transition: background-color .3s;
+      margin-left: 1rem;
+  }
+  #Header .first-part .site-tools .search-part input.not-empty,
+  #Header .first-part .site-tools .search-part input:focus {
+      --primary-color: var(--c-light);
+      --secondary-color: var(--c-dark);
+
+      background-color: var(--secondary-color);
+
+      font-weight: 600;
+  }
+
+  #Header .first-part .site-tools > * a {
+      color: var(--primary-color);
+  }
+
+  #Header .first-part .site-branding .site-logo {
+      font-size: 15rem;
+      font-weight: 700;
+      line-height: normal;
+      word-spacing: .1em;
+      letter-spacing: -.075em;
+      font-family: 'Passion One', cursive;
+
+      transition: font-size .3s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+  #Header.minimized .first-part .site-branding .site-logo {
+      font-size: 5rem;
+  }
+  #Header .first-part .site-branding .site-logo a::before {
+      --primary-color: var(--c-blue);
+
+      color: var(--primary-color);
+
+      content: "canard pc";
+      text-transform: uppercase;
+      font-family: 'Passion One';
+  }
+
+  /* Header Nav */
+  #Header nav.navbar {
+      --primary-color: var(--c-grey);
+      --secondary-color: var(--c-light);
+  }
+
+  #Header nav.navbar .container-wtt-p .grid.grid-24 {
+      grid-template-columns: 1fr auto 1fr;
+  }
+
+  #Header nav.navbar ul:not(.categories-nav) {
+      background-color: var(--secondary-color);
+  }
+  #Header nav.navbar *, #Header > nav.navbar a {
+      color: var(--primary-color);
+  }
+
+  #Header nav.navbar .socials-nav li a .svg-icon {
+      top: 0em;
+      position: relative;
+      transition: top .2s;
+  }
+  #Header nav.navbar .socials-nav li a:hover .svg-icon {
+      top: -.3em;
+  }
+  #Header nav.navbar .socials-nav li a .svg-icon svg {
+      transition: fill .2s;
+  }
+  #Header nav.navbar .socials-nav li a:hover .svg-icon svg {
+      --primary-color: var(--c-blue);
+  }
+
+  #Header nav.navbar .categories-nav {
+      --primary-color: var(--c-blue);
+      --secondary-color: var(--c-light);
+
+      top: -1px;
+      position: relative;
+  }
+
+  #Header nav.navbar .categories-nav a,
+  #Header nav.navbar .categories-nav a:last-child {
+      color: var(--primary-color);
+      background: var(--secondary-color);
+
+      font-weight: 600;
+      padding: 1rem 3rem;
+  }
+  #Header nav.navbar .categories-nav a:not(.active):hover,
+  #Header nav.navbar .categories-nav a.active {
+      color: var(--secondary-color);
+      background: var(--primary-color) !important;
+  }
+
+  #Header nav.navbar .categories-nav a.active::before,
+  #Header nav.navbar .categories-nav a:not(.active)::before {
+      content: "";
+
+      background: var(--category-color);
+
+      top: unset;
+      left: 1em;
+      right: 1em;
+      width: auto;
+      bottom: .1em;
+      height: .25em;
+      display: block;
+      position: absolute;
+  }
+
+  #Header nav.navbar .categories-nav a.active::after,
+  #Header nav.navbar .categories-nav a:not(.active)::after {
+      content: "";
+      top: calc(-.5em + 1px);
+      left: 0;
+      width: 100%;
+      height: calc(100% + 1em - 1px);
+      display: block;
+      position: absolute;
+      background: transparent;
+
+      border-width: .5em 0;
+      border-style: solid;
+      border-color: transparent;
+
+      transition: border-color .3s ease-in-out;
+  }
+  #Header nav.navbar .categories-nav a:hover::after,
+  #Header nav.navbar .categories-nav a.active::after {
+      border-color: var(--primary-color);
+  }
+
+  /* Main */
+  .page-content.default-post .cover a,
+  .page-content.default-post .post-informations a,
+  .page-content.default-post .post-conclusion a {
+      text-decoration: underline;
+  }
+  .page-content.default-post .post-layouts a {
+      font-weight: 600;
+      text-decoration: underline;
+  }
+
+  .page-content.default-post .post-informations .post-author {
+      --primary-color: var(--c-light);
+      --secondary-color: var(--c-red);
+
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+
+      left: 1em;
+      position: relative;
+      display: inline-block;
+      padding: 0 .5em .2em .5em;
+      margin-top: 1em;
+      border-radius: 0 0 .6em .6em;
+  }
+  .page-content.default-post .post-informations .post-author::before {
+      content: "";
+
+      background-color: var(--secondary-color);
+
+      top: -.25em;
+      left: -1em;
+      right: -9em;
+      height: .25em;
+      display: block;
+      position: absolute;
+  }
+  .page-content.default-post .post-informations .post-author .highlight {
+      color: var(--primary-color);
+
+      font-weight: 800;
+  }
+
+  .page-content.default-post .technical-description {
+      --primary-color: var(--c-dark);
+      --secondary-color: var(--c-lgrey);
+      --tertiary-color: var(--c-blue);
+
+      color: var(--primary-color) !important;
+      background-color: var(--secondary-color);
+
+      padding: 2em;
+      font-size: .8em;
+      line-height: initial;
+  }
+  .page-content.default-post .technical-description h3 {
+      color: var(--tertiary-color) !important;
+  }
+  .page-content.default-post .technical-description b,
+  .page-content.default-post .technical-description strong {
+      display: block;
+      padding-top: 0.25em;
+      margin-left: -.5em;
+      margin-bottom: -.5em;
+  }
+
+  .post-template-default .default-post .post-content .post-slideshow .prev-arrow {
+      left: 0;
+  }
+  .post-template-default .default-post .post-content .post-slideshow .next-arrow {
+      right: 0;
+  }
+
+  /* Footer */
+  #Footer {
+      --primary-color: var(--c-light);
+      --secondary-color: var(--c-dark);
+
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+
+      z-index: 5;
+  }
+
+  #Footer .cookies-link {
+      color: var(--primary-color);
+      text-decoration: underline;
+  }
+
+  /* Dark */
+  @media (prefers-color-scheme:dark) {
+
+  }
+
+  /* Mobile */
+  @media (prefers-color-scheme:dark) {
+
+  }
+}
