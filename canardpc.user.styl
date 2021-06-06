@@ -8,7 +8,7 @@
 ==/UserStyle== */
 
 @-moz-document regexp("https?://(!?www.)?canardpc.com.*") {
-  @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
 
   /* Couleurs */
   :root {
@@ -76,10 +76,11 @@
       --secondary-color: var(--c-light);
 
       --navbar-height: 27.5rem;
+      padding-top: unset !important;
   }
-  body:not(.calendar, .debug-master, .maintenance-page, .maquettistes-posts, .maquettistes-news) {
+  /*body:not(.calendar, .debug-master, .maintenance-page, .maquettistes-posts, .maquettistes-news) {
       padding-top: calc(var(--navbar-height) - 15.5rem);
-  }
+  }*/
 
   .site-tools.grid.grid-2 a {
       text-decoration: underline;
@@ -138,10 +139,15 @@
       --secondary-color: var(--c-light);
 
       background-color: var(--secondary-color);
+      
+      position: sticky;
+      top: -15em;
   }
 
   #Header.minimized {
       /* box-shadow: 0 1px 0 0 var(--c-blue); */
+      
+      top: -5em;
   }
 
   #Header .first-part {
