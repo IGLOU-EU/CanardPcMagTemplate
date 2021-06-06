@@ -507,7 +507,36 @@
   }
 
   /* Mobile */
-  @media (prefers-color-scheme:dark) {
-
+  @media (max-width:1024px) {
+      #Header .first-part .site-branding .site-logo,
+      #Header.minimized .first-part .site-branding .site-logo,
+      #Header .first-part .site-branding .site-logo a:focus {
+          font-size: 6rem;
+          transition: unset;
+      }
+      #Header nav.navbar {
+          display: none;
+      }
+      
+      #Header.minimized {
+            height: 0;
+            overflow: hidden;
+      }
+      #Header .first-part .site-burger-bar {
+            background-color: var(--secondary-color);
+          
+            top: unset;
+            right: 1em;
+            bottom: 1em;
+            z-index: 10;
+            padding: .5em .5em .2em .5em;
+            position: fixed;
+            transform: unset;
+            border-radius: 3px;
+      }
+      
+      .post-template-default .default-post .cover {
+          padding-top: unset;
+      }
   }
 }
