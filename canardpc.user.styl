@@ -469,39 +469,39 @@
   }
 
   @media (prefers-color-scheme:dark) {
-    body,
-    #Header,
-    #Header nav.navbar,
-    #Header nav.navbar .socials-nav li a:hover .svg-icon svg,
-    #Header nav.navbar .socials-nav li a:focus .svg-icon svg,
-    #Header nav.navbar .categories-nav {
+    body.auto-mode,
+    body.auto-mode #Header,
+    body.auto-mode #Header nav.navbar,
+    body.auto-mode #Header nav.navbar .socials-nav li a:hover .svg-icon svg,
+    body.auto-mode #Header nav.navbar .socials-nav li a:focus .svg-icon svg,
+    body.auto-mode #Header nav.navbar .categories-nav {
         --primary-color: var(--c-lgrey);
     }
 
-    body,
-    #Header,
-    #Header .first-part .site-tools .search-part input,
-    #Header nav.navbar,
-    #Header nav.navbar .categories-nav {
+    body.auto-mode,
+    body.auto-mode #Header,
+    body.auto-mode #Header .first-part .site-tools .search-part input,
+    body.auto-mode #Header nav.navbar,
+    body.auto-mode #Header nav.navbar .categories-nav {
         --secondary-color: var(--c-dark);
     }
-    #Header .first-part .site-branding .site-logo a::before {
+    body.auto-mode #Header .first-part .site-branding .site-logo a::before {
         --primary-color: var(--c-light);
     }
-    #Header .first-part .site-tools .search-part input {
+    body.auto-mode #Header .first-part .site-tools .search-part input {
           --primary-color: var(--c-grey);
     }
-    #Header .first-part .site-tools .search-part input.not-empty,
-    #Header .first-part .site-tools .search-part input:focus {
+    body.auto-mode #Header .first-part .site-tools .search-part input.not-empty,
+    body.auto-mode #Header .first-part .site-tools .search-part input:focus {
           --primary-color: var(--c-dark);
           --secondary-color: var(--c-lgrey);
     }
-    .page-content.default-post .technical-description {
+    body.auto-mode .page-content.default-post .technical-description {
           --primary-color: var(--c-lgrey);
           --secondary-color: var(--c-dark);
           --tertiary-color: var(--c-lblue);
     }
-    .post-template-default .default-post .post-content .post-layouts .layout-photo figcaption {
+    body.auto-mode .post-template-default .default-post .post-content .post-layouts .layout-photo figcaption {
         color: var(--primary-color);
     }
   }
