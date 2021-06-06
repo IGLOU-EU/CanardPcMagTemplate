@@ -432,8 +432,78 @@
   }
 
   /* Dark */
-  @media (prefers-color-scheme:dark) {
+  body.dark-mode,
+  body.dark-mode #Header,
+  body.dark-mode #Header nav.navbar,
+  body.dark-mode #Header nav.navbar .socials-nav li a:hover .svg-icon svg,
+  body.dark-mode #Header nav.navbar .socials-nav li a:focus .svg-icon svg,
+  body.dark-mode #Header nav.navbar .categories-nav {
+    --primary-color: var(--c-lgrey);
+  }
 
+  body.dark-mode,
+  body.dark-mode #Header,
+  body.dark-mode #Header .first-part .site-tools .search-part input,
+  body.dark-mode #Header nav.navbar,
+  body.dark-mode #Header nav.navbar .categories-nav {
+    --secondary-color: var(--c-dark);
+  }
+  body.dark-mode #Header .first-part .site-branding .site-logo a::before {
+    --primary-color: var(--c-light);
+  }
+  body.dark-mode #Header .first-part .site-tools .search-part input {
+      --primary-color: var(--c-grey);
+  }
+  body.dark-mode #Header .first-part .site-tools .search-part input.not-empty,
+  body.dark-mode #Header .first-part .site-tools .search-part input:focus {
+      --primary-color: var(--c-dark);
+      --secondary-color: var(--c-lgrey);
+  }
+  body.dark-mode .page-content.default-post .technical-description {
+      --primary-color: var(--c-lgrey);
+      --secondary-color: var(--c-dark);
+      --tertiary-color: var(--c-lblue);
+  }
+  body.dark-mode .post-template-default .default-post .post-content .post-layouts .layout-photo figcaption {
+    color: var(--primary-color);
+  }
+
+  @media (prefers-color-scheme:dark) {
+    body,
+    #Header,
+    #Header nav.navbar,
+    #Header nav.navbar .socials-nav li a:hover .svg-icon svg,
+    #Header nav.navbar .socials-nav li a:focus .svg-icon svg,
+    #Header nav.navbar .categories-nav {
+        --primary-color: var(--c-lgrey);
+    }
+
+    body,
+    #Header,
+    #Header .first-part .site-tools .search-part input,
+    #Header nav.navbar,
+    #Header nav.navbar .categories-nav {
+        --secondary-color: var(--c-dark);
+    }
+    #Header .first-part .site-branding .site-logo a::before {
+        --primary-color: var(--c-light);
+    }
+    #Header .first-part .site-tools .search-part input {
+          --primary-color: var(--c-grey);
+    }
+    #Header .first-part .site-tools .search-part input.not-empty,
+    #Header .first-part .site-tools .search-part input:focus {
+          --primary-color: var(--c-dark);
+          --secondary-color: var(--c-lgrey);
+    }
+    .page-content.default-post .technical-description {
+          --primary-color: var(--c-lgrey);
+          --secondary-color: var(--c-dark);
+          --tertiary-color: var(--c-lblue);
+    }
+    .post-template-default .default-post .post-content .post-layouts .layout-photo figcaption {
+        color: var(--primary-color);
+    }
   }
 
   /* Mobile */
