@@ -20,6 +20,8 @@
       --c-beige: #eeedd2;
       --c-lgrey: #f2f2f2;
       --c-light: #fff;
+      
+      --an-time: .12s
   }
 
   /* Animations */
@@ -192,6 +194,14 @@
       text-transform: uppercase;
       font-family: 'Passion One';
   }
+  #Header .first-part .site-branding .site-logo a:focus {
+    font-size: 1.2em;
+  }
+
+  #Header .first-part .site-tools .user-part a:hover,
+  #Header .first-part .site-tools .user-part a:focus {
+    font-weight: bold;
+  }
 
   /* Header Nav */
   #Header nav.navbar {
@@ -206,8 +216,30 @@
   #Header nav.navbar ul:not(.categories-nav) {
       background-color: var(--secondary-color);
   }
-  #Header nav.navbar *, #Header > nav.navbar a {
+  #Header nav.navbar *,
+  #Header > nav.navbar a {
       color: var(--primary-color);
+  }
+  #Header > nav.navbar :not(.categories-nav) a::after {
+    content: "";
+
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 1px;
+    display: block;
+    position: absolute;
+    background-color: transparent;
+      
+    transition: background-color var(--an-time), right var(--an-time);
+  }
+  #Header > nav.navbar :not(.categories-nav) a:hover::after, 
+  #Header > nav.navbar :not(.categories-nav) a:focus::after {
+    content: "";
+
+    background-color: var(--primary-color);
+
+    right: 0;
   }
 
   #Header nav.navbar .socials-nav li a .svg-icon {
@@ -215,13 +247,15 @@
       position: relative;
       transition: top .2s;
   }
-  #Header nav.navbar .socials-nav li a:hover .svg-icon {
+  #Header nav.navbar .socials-nav li a:hover .svg-icon,
+  #Header nav.navbar .socials-nav li a:focus .svg-icon {
       top: -.3em;
   }
   #Header nav.navbar .socials-nav li a .svg-icon svg {
       transition: fill .2s;
   }
-  #Header nav.navbar .socials-nav li a:hover .svg-icon svg {
+  #Header nav.navbar .socials-nav li a:hover .svg-icon svg,
+  #Header nav.navbar .socials-nav li a:focus .svg-icon svg {
       --primary-color: var(--c-blue);
   }
 
@@ -242,6 +276,7 @@
       padding: 1rem 3rem;
   }
   #Header nav.navbar .categories-nav a:not(.active):hover,
+  #Header nav.navbar .categories-nav a:not(.active):focus,
   #Header nav.navbar .categories-nav a.active {
       color: var(--secondary-color);
       background: var(--primary-color) !important;
@@ -281,6 +316,7 @@
       transition: border-color .3s ease-in-out;
   }
   #Header nav.navbar .categories-nav a:hover::after,
+  #Header nav.navbar .categories-nav a:focus::after,
   #Header nav.navbar .categories-nav a.active::after {
       border-color: var(--primary-color);
   }
