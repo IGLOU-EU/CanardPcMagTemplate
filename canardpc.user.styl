@@ -7,8 +7,8 @@
 @license      MIT
 ==/UserStyle== */
 
-@-moz-document regexp("https?://(!?www.)?canardpc.com.*") {
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+@-moz-document regexp("https?://(!?www.)?canardpc.com.*") {
 
   /* Couleurs */
   :root {
@@ -211,6 +211,8 @@
 
   /* Header Nav */
   #Header nav.navbar {
+      height: auto;
+      
       --primary-color: var(--c-grey);
       --secondary-color: var(--c-light);
   }
@@ -269,7 +271,6 @@
       --primary-color: var(--c-blue);
       --secondary-color: var(--c-light);
 
-      top: -1px;
       position: relative;
   }
 
@@ -307,7 +308,7 @@
   #Header nav.navbar .categories-nav a.active::after,
   #Header nav.navbar .categories-nav a:not(.active)::after {
       content: "";
-      top: calc(-.5em + 1px);
+      top: -.5em;
       left: 0;
       width: 100%;
       height: calc(100% + 1em - 1px);
