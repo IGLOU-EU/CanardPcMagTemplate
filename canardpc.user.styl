@@ -134,20 +134,27 @@
   }
 
   /* Header */
-  #Header {
+  #Header,
+  body.home #Header.minimized,
+  body.category #Header.minimized {
       --primary-color: var(--c-dark);
       --secondary-color: var(--c-light);
 
       background-color: var(--secondary-color);
       
       position: sticky;
-      top: -15em;
+      top: -14em;
   }
 
   #Header.minimized {
       /* box-shadow: 0 1px 0 0 var(--c-blue); */
       
       top: -5em;
+  }
+  
+  body.home #Header.minimized .first-part,
+  body.category #Header.minimized .first-part {
+    padding: 2.5rem !important;
   }
 
   #Header .first-part {
@@ -178,7 +185,9 @@
       color: var(--primary-color);
   }
 
-  #Header .first-part .site-branding .site-logo {
+  #Header .first-part .site-branding .site-logo,
+  body.home #Header.minimized .first-part .site-branding .site-logo,
+  body.category #Header.minimized .first-part .site-branding .site-logo {
       font-size: 15rem;
       font-weight: 700;
       line-height: normal;
