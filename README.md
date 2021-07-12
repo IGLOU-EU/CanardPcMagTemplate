@@ -11,6 +11,15 @@ Page officiel sur [Userstyles.world](https://userstyles.world/style/164/canardpc
 ## Changelog
 Liste des principaux changements
 
+### 1.0.2 (2021/07/13)
+
+#### Features
+- Ajout de couleur sur les liens d'acticles lu
+
+#### Bug Fixes
+- Fix la taille de la navbar
+- Fix de la boucle d'animation sur le titre
+
 ### 1.0.1 (2021/06/06)
 
 #### Features
@@ -38,3 +47,4 @@ Liste des principaux changements
 ## Participations
 - Coin-coin le Canapin
 - Moimadmax
+- gros_bidule
