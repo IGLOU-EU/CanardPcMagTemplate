@@ -11,6 +11,16 @@ Page officiel sur [Userstyles.world](https://userstyles.world/style/164/canardpc
 ## Changelog
 Liste des principaux changements
 
+### 1.0.3 (2021/08/30)
+
+#### Features
+- Sommaire rendu plus compacte
+
+#### Bug Fixes
+- Fix la couleur des liens de la navbar
+- Fix de la tailles et animations sur le titre
+- Fix du `position: sticky`
+
 ### 1.0.2 (2021/07/13)
 
 #### Features
