@@ -38,7 +38,7 @@
   #Header.of-main .categories-nav > a:not(.active), 
   #Header.of-main .categories-nav > a:not(.active):hover,
   #Footer {
-      border: none;
+      border: none !important;
   }
   #Header {
       background-image: none;
@@ -68,6 +68,17 @@
   #Header > nav.navbar .categories-nav a:not(:first-child)::before,
   #Header > nav.navbar .categories-nav a:not(:last-child)::after {
       transform: none;
+  }
+  body #Header .first-part,
+  body #Header .first-part.container,
+  body.home #Header.minimized .first-part, 
+  body.home #Header.minimized .first-part.container, 
+  body.category #Header.minimized .first-part,
+  body.category #Header.minimized .first-part.container {
+    padding: 0 !important;
+  }
+  #Header .first-part {
+    height: auto;
   }
 
   /* Global */
@@ -147,7 +158,7 @@
       background-color: var(--secondary-color);
       
       position: sticky;
-      top: -14em;
+      top: -11em;
   }
 
   #Header.minimized {
@@ -189,7 +200,7 @@
       color: var(--primary-color);
   }
 
-  #Header .first-part .site-branding .site-logo,
+  body #Header .first-part .site-branding .site-logo,
   body.home #Header.minimized .first-part .site-branding .site-logo,
   body.category #Header.minimized .first-part .site-branding .site-logo {
       font-size: 15rem;
@@ -201,8 +212,9 @@
 
       transition: font-size .3s cubic-bezier(.68,-0.55,.27,1.55);
   }
-  #Header.minimized .first-part .site-branding .site-logo {
-      font-size: 5rem;
+  body:not(.home, .category) #Header.minimized .first-part .site-branding .site-logo,
+  body:not(.home, .category) #Header .first-part .site-branding .site-logo {
+      font-size: 7rem !important;
   }
   #Header .first-part .site-branding .site-logo a::before {
       --primary-color: var(--c-blue);
@@ -212,9 +224,6 @@
       content: "canard pc";
       text-transform: uppercase;
       font-family: 'Passion One';
-  }
-  #Header .first-part .site-branding .site-logo a:focus {
-    font-size: 1.2em;
   }
 
   #Header .first-part .site-tools .user-part a:hover,
