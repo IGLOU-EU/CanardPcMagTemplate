@@ -351,27 +351,27 @@
   }
   
   /* Sommaire */
-  .sommaire .post .post-thumbnail {
+  .sommaire .post-post .post-thumbnail {
     height: 100%;
     padding-bottom: unset;
   }
-  .sommaire .post .post-caption {
+  .sommaire .post-post .post-caption {
     display: grid;
     grid-template-areas: "title cat" "title auth";
     grid-template-columns: 2fr 1fr;
     grid-gap: 0 1em;
   }
-  .sommaire .post .post-caption .post-category {
+  .sommaire .post-post .post-caption .post-category {
     grid-area: cat;
   }
-  .sommaire .post .post-caption .post-author {
+  .sommaire .post-post .post-caption .post-author {
     grid-area: auth;
   }
-  .sommaire .post .post-caption > :last-child {
+  .sommaire .post-post .post-caption > :last-child {
     grid-area: title;
   }
-  .sommaire .post .post-caption .post-title,
-  .sommaire .post .post-caption .post-title .subtitle {
+  .sommaire .post-post .post-caption .post-title,
+  .sommaire .post-post .post-caption .post-title .subtitle {
     font-size: 2rem;
     line-height: normal;
   }
